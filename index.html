@@ -1,0 +1,1417 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Marketing · Nhân vật Việt Nam · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0B0F;
+  --bg2: #10121A;
+  --bg3: #161824;
+  --surface: #1C1F2E;
+  --surface2: #232740;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #E8EAF0;
+  --text2: #9098B8;
+  --text3: #5C6485;
+  --purple: #8B6FDB;
+  --purple-light: #B09AEF;
+  --teal: #2DD4BF;
+  --coral: #F97316;
+  --amber: #FBBF24;
+  --blue: #60A5FA;
+  --pink: #F472B6;
+  --green: #34D399;
+  --red: #F87171;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ─── BACKGROUND TEXTURE ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(139,111,219,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(45,212,191,0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,11,15,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 52px;
+}
+nav .logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+nav .logo span { color: var(--purple-light); }
+nav a {
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: color .2s, background .2s;
+}
+nav a:hover { color: var(--text); background: var(--surface); }
+
+/* ─── MAIN ─── */
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(139,111,219,0.12);
+  border: 1px solid rgba(139,111,219,0.3);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--purple-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeUp .6s ease both;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--purple-light);
+  border-radius: 50%;
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.4)} }
+
+h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  animation: fadeUp .7s ease .1s both;
+}
+h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--purple-light), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: 17px;
+  color: var(--text2);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+  animation: fadeUp .7s ease .2s both;
+}
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  animation: fadeUp .7s ease .3s both;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.chip-purple { background: rgba(139,111,219,.1); border-color: rgba(139,111,219,.3); color: var(--purple-light); }
+.chip-teal   { background: rgba(45,212,191,.08); border-color: rgba(45,212,191,.25); color: var(--teal); }
+.chip-coral  { background: rgba(249,115,22,.08); border-color: rgba(249,115,22,.25); color: var(--coral); }
+.chip-amber  { background: rgba(251,191,36,.08); border-color: rgba(251,191,36,.25); color: var(--amber); }
+.chip-blue   { background: rgba(96,165,250,.08); border-color: rgba(96,165,250,.25); color: var(--blue); }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+
+/* ─── SECTION TITLES ─── */
+.section-title {
+  font-family: var(--font-head);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: .4rem;
+}
+.section-sub {
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: .5rem;
+}
+
+section { margin-bottom: 5rem; }
+
+/* ─── FLOW SECTION ─── */
+.flow-grid {
+  display: grid;
+  gap: 1.5px;
+}
+.flow-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  transition: border-color .25s, background .25s;
+  position: relative;
+  overflow: hidden;
+}
+.flow-step:hover {
+  border-color: var(--border2);
+  background: var(--surface2);
+}
+.flow-step::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+}
+.step-purple::before { background: var(--purple); }
+.step-teal::before   { background: var(--teal); }
+.step-coral::before  { background: var(--coral); }
+.step-amber::before  { background: var(--amber); }
+.step-pink::before   { background: var(--pink); }
+.step-blue::before   { background: var(--blue); }
+.step-green::before  { background: var(--green); }
+
+.step-num {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.num-purple { background: rgba(139,111,219,.15); color: var(--purple-light); }
+.num-teal   { background: rgba(45,212,191,.12); color: var(--teal); }
+.num-coral  { background: rgba(249,115,22,.12); color: var(--coral); }
+.num-amber  { background: rgba(251,191,36,.12); color: var(--amber); }
+.num-pink   { background: rgba(244,114,182,.12); color: var(--pink); }
+.num-blue   { background: rgba(96,165,250,.12); color: var(--blue); }
+.num-green  { background: rgba(52,211,153,.12); color: var(--green); }
+
+.step-body h3 {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .35rem;
+}
+.step-body p {
+  font-size: 13.5px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: .5rem;
+}
+.step-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.step-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.tag-purple { background: rgba(139,111,219,.15); color: var(--purple-light); }
+.tag-teal   { background: rgba(45,212,191,.12); color: var(--teal); }
+.tag-coral  { background: rgba(249,115,22,.12); color: var(--coral); }
+.tag-amber  { background: rgba(251,191,36,.12); color: var(--amber); }
+.tag-pink   { background: rgba(244,114,182,.12); color: var(--pink); }
+.tag-blue   { background: rgba(96,165,250,.12); color: var(--blue); }
+.tag-green  { background: rgba(52,211,153,.12); color: var(--green); }
+.tag-gray   { background: rgba(255,255,255,.06); color: var(--text2); }
+
+.step-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  color: var(--text3);
+  font-size: 18px;
+}
+
+/* ─── DETAIL BLOCKS ─── */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: .75rem;
+}
+.detail-block {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.detail-block h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+.detail-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.detail-block li {
+  font-size: 12.5px;
+  color: var(--text);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.detail-block li::before {
+  content: '·';
+  color: var(--text3);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── PRICING ─── */
+.pricing-tool {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.pricing-tool-header {
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tool-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.pricing-tool-header h3 {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.pricing-tool-header p {
+  font-size: 12.5px;
+  color: var(--text2);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead tr {
+  background: rgba(255,255,255,.04);
+}
+thead th {
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text3);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+}
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,.025); }
+td {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text);
+  vertical-align: top;
+}
+.td-plan { font-weight: 600; color: var(--text); }
+.td-price {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.td-note { color: var(--text2); font-size: 12.5px; }
+.free-badge {
+  display: inline-block;
+  background: rgba(52,211,153,.12);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.rec-badge {
+  display: inline-block;
+  background: rgba(251,191,36,.1);
+  color: var(--amber);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.api-note {
+  background: var(--bg2);
+  padding: 10px 14px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text2);
+  border-top: 1px solid var(--border);
+}
+
+/* ─── COST SUMMARY ─── */
+.cost-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+.cost-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: border-color .2s;
+}
+.cost-card:hover { border-color: var(--border2); }
+.cost-card .tier {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text2);
+  margin-bottom: .5rem;
+}
+.cost-card .amount {
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+.cost-card .desc {
+  font-size: 12px;
+  color: var(--text3);
+  line-height: 1.4;
+}
+
+/* ─── API BUILD SECTION ─── */
+.feasibility-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.feasibility-score {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(var(--amber) 0% 72%, var(--surface2) 72% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.feasibility-score::before {
+  content: '';
+  position: absolute;
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.feasibility-score span {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--amber);
+}
+.feasibility-header h3 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+.feasibility-header p {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.eval-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.eval-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.3rem;
+}
+.eval-card h4 {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eval-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.eval-card li {
+  font-size: 13px;
+  color: var(--text2);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.eval-card li .dot {
+  width: 16px; height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+.dot-green { background: rgba(52,211,153,.15); color: var(--green); }
+.dot-red   { background: rgba(248,113,113,.12); color: var(--red); }
+.dot-amber { background: rgba(251,191,36,.1); color: var(--amber); }
+
+.arch-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.arch-block h3 {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.arch-layers {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.arch-layer {
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.layer-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  width: 80px;
+  flex-shrink: 0;
+}
+.layer-content {
+  font-size: 13px;
+  flex: 1;
+}
+.layer-tech {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.verdict-box {
+  background: linear-gradient(135deg, rgba(139,111,219,.08), rgba(45,212,191,.05));
+  border: 1px solid rgba(139,111,219,.25);
+  border-radius: 16px;
+  padding: 1.8rem;
+}
+.verdict-box h3 {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--purple-light);
+}
+.verdict-phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 1.2rem;
+}
+.phase-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.phase-card .phase-num {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .4rem;
+}
+.phase-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .4rem;
+}
+.phase-card p {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.phase-card .duration {
+  margin-top: .6rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width: 760px) {
+  .cost-cards { grid-template-columns: 1fr 1fr; }
+  .eval-grid  { grid-template-columns: 1fr; }
+  .verdict-phases { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+  nav a { display: none; }
+  h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">AI Video<span>VN</span> &nbsp;·&nbsp; 2026</div>
+  <a href="#flow">Luồng tạo</a>
+  <a href="#pricing">Bảng giá</a>
+  <a href="#build">Tự build</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Cập nhật tháng 4 / 2026</div>
+  <h1>AI Video Marketing<br><em>Nhân vật Việt Nam</em></h1>
+  <p>Luồng sản xuất đầy đủ, bảng giá các dịch vụ và đánh giá khả năng tự tích hợp API</p>
+  <div class="hero-chips">
+    <span class="chip chip-purple">Kimi · Moonshot AI</span>
+    <span class="chip chip-coral">Kling AI · Video</span>
+    <span class="chip chip-blue">Grok · Aurora</span>
+    <span class="chip chip-amber">ElevenLabs · FPT.AI</span>
+    <span class="chip chip-teal">Lip Sync · Dựng phim</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 1: LUỒNG TẠO VIDEO
+══════════════════════════════════════ -->
+<section id="flow">
+  <div class="section-label">Quy trình sản xuất</div>
+  <h2 class="section-title">Luồng tạo video từ đầu đến cuối</h2>
+  <p class="section-sub">7 bước từ input văn bản đến video marketing hoàn chỉnh với nhân vật Việt Nam</p>
+
+  <div class="flow-grid">
+
+    <!-- STEP 1 -->
+    <div class="flow-step step-purple">
+      <div class="step-num num-purple">01</div>
+      <div class="step-body">
+        <h3>Input & Kịch bản — Kimi AI</h3>
+        <p>Nhập brief marketing tiếng Việt. Kimi phân tích ngữ cảnh, sinh prompt tiếng Anh chất lượng cao cho image/video gen, đồng thời viết script voice over phù hợp nhịp 15–30 giây.</p>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Kimi xuất ra</h4>
+            <ul>
+              <li>Mô tả nhân vật: da ngăm, tóc đen, nét Đông Nam Á</li>
+              <li>Prompt Grok: trang phục, ánh sáng, bối cảnh Việt</li>
+              <li>Prompt Kling: chuyển động, camera, biểu cảm</li>
+              <li>Script voice: ngắn gọn, phù hợp giọng TTS</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Ví dụ prompt nhân vật</h4>
+            <ul>
+              <li>Vietnamese woman, 25–30yo, warm olive skin</li>
+              <li>Straight black hair, natural makeup</li>
+              <li>Modern ao dai or minimal streetwear</li>
+              <li>Morning light, Saigon coffee shop bg</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-tags" style="margin-top:.6rem">
+          <span class="step-tag tag-purple">Kimi K2.5</span>
+          <span class="step-tag tag-gray">Script tiếng Việt → EN Prompt</span>
+          <span class="step-tag tag-gray">Deep Research</span>
+        </div>
+      </div>
+      <span class="step-badge chip-purple" style="background:rgba(139,111,219,.15);color:var(--purple-light);border:1px solid rgba(139,111,219,.3);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Kimi</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 2 -->
+    <div class="flow-step step-blue">
+      <div class="step-num num-blue">02</div>
+      <div class="step-body">
+        <h3>Sinh ảnh nhân vật — Grok Aurora</h3>
+        <p>Từ prompt của Kimi, Grok Aurora tạo ảnh reference nhân vật chất lượng cao. Quan trọng: lưu lại <strong style="color:var(--blue)">seed number</strong> để tái tạo nhân vật nhất quán qua mọi cảnh.</p>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Cài đặt sinh ảnh</h4>
+            <ul>
+              <li>Tỉ lệ: 9:16 (portrait) hoặc 1:1</li>
+              <li>Tạo 4–6 góc: thẳng, 3/4, nghiêng, toàn thân</li>
+              <li>Ghi seed → dùng lại cho consistency</li>
+              <li>Ánh sáng: golden hour hoặc soft studio</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Tránh lỗi phổ biến</h4>
+            <ul>
+              <li>Không để prompt mơ hồ về nét mặt châu Á</li>
+              <li>Chỉ định rõ: "Vietnamese, NOT East Asian"</li>
+              <li>Trang phục phải phù hợp brand/sản phẩm</li>
+              <li>Test nhiều seed trước khi chốt nhân vật</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-tags" style="margin-top:.6rem">
+          <span class="step-tag tag-blue">Grok Aurora</span>
+          <span class="step-tag tag-gray">Seed cố định</span>
+          <span class="step-tag tag-gray">Reference image</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(96,165,250,.12);color:var(--blue);border:1px solid rgba(96,165,250,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Grok</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 3 -->
+    <div class="flow-step step-coral">
+      <div class="step-num num-coral">03</div>
+      <div class="step-body">
+        <h3>Sinh video chuyển động — Kling AI</h3>
+        <p>Đây là bước nặng nhất. Kling nhận reference image → sinh clip với chuyển động tự nhiên. Dùng Motion Brush để chỉ định vùng chuyển động, Camera Control cho góc quay cinematic.</p>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Motion Prompt mẫu</h4>
+            <ul>
+              <li>"She walks confidently into cafe, smiles at camera"</li>
+              <li>"Holds product at chest, slight head tilt, soft blink"</li>
+              <li>"Natural breathing, light wind on hair"</li>
+              <li>"Dolly in slowly, warm bokeh background"</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Cài đặt kỹ thuật</h4>
+            <ul>
+              <li>Thời lượng: 5s (Standard) / 10s (Pro+)</li>
+              <li>Resolution: 720p Standard / 1080p Pro</li>
+              <li>Tỉ lệ: 9:16 TikTok/Reels · 16:9 YouTube</li>
+              <li>CFG Scale: 7–8 cho realism cao</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-tags" style="margin-top:.6rem">
+          <span class="step-tag tag-coral">Kling 2.0</span>
+          <span class="step-tag tag-gray">Motion Brush</span>
+          <span class="step-tag tag-gray">Camera Control</span>
+          <span class="step-tag tag-gray">Image-to-Video</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(249,115,22,.12);color:var(--coral);border:1px solid rgba(249,115,22,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Kling</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 4 -->
+    <div class="flow-step step-amber">
+      <div class="step-num num-amber">04</div>
+      <div class="step-body">
+        <h3>Voice Over tiếng Việt — ElevenLabs / FPT.AI</h3>
+        <p>Script từ Kimi được chuyển thành giọng nói tự nhiên. Chọn giọng theo vùng miền và tonality thương hiệu. Dùng SSML để kiểm soát nhịp điệu, pause, và emphasis.</p>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Cài đặt giọng nói</h4>
+            <ul>
+              <li>Tốc độ: 0.88× – 0.95× (rõ ràng hơn)</li>
+              <li>Pitch: 0 (default) hoặc +1 cho nữ trẻ trung</li>
+              <li>Stability: 0.6–0.75 (ElevenLabs)</li>
+              <li>Similarity Boost: 0.75 trở lên</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>SSML ví dụ</h4>
+            <ul>
+              <li>&lt;break time="300ms"/&gt; sau câu ngắt</li>
+              <li>&lt;emphasis level="strong"&gt;sản phẩm&lt;/emphasis&gt;</li>
+              <li>FPT.AI: giọng Bắc/Nam/Trung chuẩn nhất</li>
+              <li>ElevenLabs: tự nhiên hơn, phù hợp premium</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-tags" style="margin-top:.6rem">
+          <span class="step-tag tag-amber">ElevenLabs</span>
+          <span class="step-tag tag-amber">FPT.AI TTS</span>
+          <span class="step-tag tag-gray">SSML</span>
+          <span class="step-tag tag-gray">Giọng Bắc / Nam / Trung</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Voice</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 5 -->
+    <div class="flow-step step-pink">
+      <div class="step-num num-pink">05</div>
+      <div class="step-body">
+        <h3>Lip Sync — Đồng bộ khẩu hình</h3>
+        <p>Upload clip Kling + audio voice over vào công cụ lip sync. Kling Lip Sync mới nhất đã hỗ trợ tiếng Việt khá tốt nhờ nhận diện phoneme riêng cho ngôn ngữ SEA.</p>
+        <div class="step-tags" style="margin-top:.4rem">
+          <span class="step-tag tag-pink">Kling Lip Sync</span>
+          <span class="step-tag tag-pink">Hedra</span>
+          <span class="step-tag tag-gray">HeyGen</span>
+          <span class="step-tag tag-gray">Wav2Lip</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(244,114,182,.12);color:var(--pink);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Lip Sync</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 6 -->
+    <div class="flow-step step-teal">
+      <div class="step-num num-teal">06</div>
+      <div class="step-body">
+        <h3>Dựng & Hậu kỳ — CapCut / Premiere</h3>
+        <p>Ghép các clip, thêm B-roll cảnh Việt Nam, nhạc nền, phụ đề tự động. Điều chỉnh màu sắc warm tone để da nhân vật trông tự nhiên hơn trên màn hình di động.</p>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Checklist dựng phim</h4>
+            <ul>
+              <li>Nhạc nền: volume -20dB so với voice</li>
+              <li>Phụ đề: font rõ ràng, màu trắng viền đen</li>
+              <li>Color grade: nâng warm tone +10–15</li>
+              <li>CTA cuối: 3–5 giây với text overlay</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Export settings</h4>
+            <ul>
+              <li>TikTok/Reels: 1080×1920, 30fps, H.264</li>
+              <li>YouTube Shorts: 1080×1920, 60fps</li>
+              <li>Zalo: 720p, bitrate 4Mbps</li>
+              <li>Facebook: 9:16 hoặc 1:1 square</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step-tags" style="margin-top:.6rem">
+          <span class="step-tag tag-teal">CapCut Pro</span>
+          <span class="step-tag tag-gray">Premiere</span>
+          <span class="step-tag tag-gray">Phụ đề tự động</span>
+          <span class="step-tag tag-gray">B-roll Việt Nam</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(45,212,191,.1);color:var(--teal);border:1px solid rgba(45,212,191,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Dựng</span>
+    </div>
+
+    <div class="flow-connector">↓</div>
+
+    <!-- STEP 7 -->
+    <div class="flow-step step-green">
+      <div class="step-num num-green">07</div>
+      <div class="step-body">
+        <h3>Xuất & Phân phối</h3>
+        <p>Video thành phẩm sẵn sàng đăng lên các nền tảng chính ở Việt Nam. Mỗi nền tảng có spec tối ưu riêng.</p>
+        <div class="step-tags">
+          <span class="step-tag tag-green">TikTok</span>
+          <span class="step-tag tag-green">Instagram Reels</span>
+          <span class="step-tag tag-green">YouTube Shorts</span>
+          <span class="step-tag tag-gray">Zalo</span>
+          <span class="step-tag tag-gray">Facebook</span>
+        </div>
+      </div>
+      <span class="step-badge" style="background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.25);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;">Output</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 2: BẢNG GIÁ
+══════════════════════════════════════ -->
+<section id="pricing">
+  <div class="section-label">Chi phí dịch vụ</div>
+  <h2 class="section-title">Bảng giá các công cụ</h2>
+  <p class="section-sub">Tất cả giá USD · 1 USD ≈ 25,000 VND · Cập nhật tháng 4/2026</p>
+
+  <!-- Kling -->
+  <div class="pricing-tool">
+    <div class="pricing-tool-header" style="background:rgba(249,115,22,.07);border-bottom:1px solid rgba(249,115,22,.15)">
+      <div class="tool-icon" style="background:rgba(249,115,22,.15);color:var(--coral)">🎬</div>
+      <div>
+        <h3>Kling AI — Sinh video chuyển động</h3>
+        <p>kuaishou · klingai.com · Credit-based</p>
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Gói</th><th>Giá / tháng</th><th>Credits</th><th>Tính năng chính</th><th>Phù hợp</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-plan">Free <span class="free-badge">free</span></td>
+          <td class="td-price" style="color:var(--green)">$0</td>
+          <td class="td-note">66 credits/ngày</td>
+          <td class="td-note">Video 5–10s, có watermark, độ phân giải thấp</td>
+          <td class="td-note">Thử nghiệm</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Standard</td>
+          <td class="td-price" style="color:var(--coral)">$10</td>
+          <td class="td-note">660/tháng</td>
+          <td class="td-note">Video 720p, không watermark, ~33 video 5s</td>
+          <td class="td-note">Creator nhỏ</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Pro <span class="rec-badge">khuyên dùng</span></td>
+          <td class="td-price" style="color:var(--coral)">$37</td>
+          <td class="td-note">3,000/tháng</td>
+          <td class="td-note">Video 1080p, Motion Brush, Camera Control, Lip Sync</td>
+          <td class="td-note">Marketing team</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Premier</td>
+          <td class="td-price" style="color:var(--coral)">$92</td>
+          <td class="td-note">8,000/tháng</td>
+          <td class="td-note">Tất cả Pro + priority queue + early features</td>
+          <td class="td-note">Studio / Agency</td>
+        </tr>
+        <tr>
+          <td class="td-plan">API Enterprise</td>
+          <td class="td-price" style="color:var(--coral)">~$1,400/tháng</td>
+          <td class="td-note">~10,000/tháng</td>
+          <td class="td-note">Tích hợp trực tiếp, ~$1/video 10s. Fal.ai: ~$0.90/video</td>
+          <td class="td-note">Developer</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="api-note">★ Credit rollover 20% · Mua thêm: $5 = 330 credits (hiệu lực 2 năm)</div>
+  </div>
+
+  <!-- Kimi -->
+  <div class="pricing-tool">
+    <div class="pricing-tool-header" style="background:rgba(139,111,219,.07);border-bottom:1px solid rgba(139,111,219,.2)">
+      <div class="tool-icon" style="background:rgba(139,111,219,.15);color:var(--purple-light)">🧠</div>
+      <div>
+        <h3>Kimi AI — Phân tích & viết prompt (Moonshot AI)</h3>
+        <p>moonshot.ai · platform.moonshot.ai (API)</p>
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Gói</th><th>Giá / tháng</th><th>Hạn mức</th><th>Tính năng</th><th>Phù hợp</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-plan">Adagio (Free) <span class="free-badge">free</span></td>
+          <td class="td-price" style="color:var(--green)">$0</td>
+          <td class="td-note">Chat cơ bản</td>
+          <td class="td-note">Chat, đọc tài liệu, web search giới hạn</td>
+          <td class="td-note">Thử nghiệm</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Andante / Moderato <span class="rec-badge">khuyên dùng</span></td>
+          <td class="td-price" style="color:var(--purple-light)">$19</td>
+          <td class="td-note">Nâng cao</td>
+          <td class="td-note">Deep Research, OK Computer agent, Kimi Code, tốc độ ưu tiên</td>
+          <td class="td-note">Creator</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Enterprise / Heavy</td>
+          <td class="td-price" style="color:var(--purple-light)">~$199</td>
+          <td class="td-note">Không giới hạn</td>
+          <td class="td-note">K2 Turbo ưu tiên, team workspace, SLA</td>
+          <td class="td-note">Studio lớn</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="api-note">API: Kimi K2 — $0.60/M input · $2.50/M output · Cache hit: $0.15/M · K2.5: $0.60/$3.00 per M tokens</div>
+  </div>
+
+  <!-- Grok -->
+  <div class="pricing-tool">
+    <div class="pricing-tool-header" style="background:rgba(96,165,250,.06);border-bottom:1px solid rgba(96,165,250,.15)">
+      <div class="tool-icon" style="background:rgba(96,165,250,.12);color:var(--blue)">⚡</div>
+      <div>
+        <h3>Grok / Aurora (xAI) — Sinh ảnh nhân vật</h3>
+        <p>x.ai · grok.com · Aurora image engine</p>
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Gói</th><th>Giá / tháng</th><th>Model</th><th>Tính năng</th><th>Phù hợp</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-plan">Free <span class="free-badge">free</span></td>
+          <td class="td-price" style="color:var(--green)">$0</td>
+          <td class="td-note">Grok 3</td>
+          <td class="td-note">Aurora image gen, voice, real-time X data (~10 req/2h)</td>
+          <td class="td-note">Thử nghiệm</td>
+        </tr>
+        <tr>
+          <td class="td-plan">X Premium</td>
+          <td class="td-price" style="color:var(--blue)">$8</td>
+          <td class="td-note">Grok 3</td>
+          <td class="td-note">Tăng giới hạn query trong X platform</td>
+          <td class="td-note">User X</td>
+        </tr>
+        <tr>
+          <td class="td-plan">SuperGrok <span class="rec-badge">khuyên dùng</span></td>
+          <td class="td-price" style="color:var(--blue)">$30</td>
+          <td class="td-note">Grok 4 đầy đủ</td>
+          <td class="td-note">Aurora nâng cao, DeepSearch, 128K memory, Big Brain Mode</td>
+          <td class="td-note">Creator</td>
+        </tr>
+        <tr>
+          <td class="td-plan">X Premium+</td>
+          <td class="td-price" style="color:var(--blue)">$40</td>
+          <td class="td-note">Grok 4 ưu tiên</td>
+          <td class="td-note">Priority throughput, X không quảng cáo</td>
+          <td class="td-note">Power user X</td>
+        </tr>
+        <tr>
+          <td class="td-plan">SuperGrok Heavy</td>
+          <td class="td-price" style="color:var(--blue)">$300</td>
+          <td class="td-note">Grok 4 Heavy</td>
+          <td class="td-note">Reasoning mạnh nhất, volume cao</td>
+          <td class="td-note">Dev / Research</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="api-note">API: Grok 4.1 — $0.20/M input · $0.50/M output · Aurora ảnh (PoYo): $0.03/ảnh · Video 6s: $0.15/clip</div>
+  </div>
+
+  <!-- ElevenLabs -->
+  <div class="pricing-tool">
+    <div class="pricing-tool-header" style="background:rgba(251,191,36,.06);border-bottom:1px solid rgba(251,191,36,.15)">
+      <div class="tool-icon" style="background:rgba(251,191,36,.12);color:var(--amber)">🎙</div>
+      <div>
+        <h3>ElevenLabs — Voice Over đa ngôn ngữ</h3>
+        <p>elevenlabs.io · Credit-based (characters)</p>
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Gói</th><th>Giá / tháng</th><th>Credits</th><th>Tính năng</th><th>Phù hợp</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-plan">Free <span class="free-badge">free</span></td>
+          <td class="td-price" style="color:var(--green)">$0</td>
+          <td class="td-note">10,000 chars (~10 phút)</td>
+          <td class="td-note">TTS cơ bản, cần attribution, không commercial</td>
+          <td class="td-note">Test</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Starter</td>
+          <td class="td-price" style="color:var(--amber)">$5</td>
+          <td class="td-note">30,000 chars</td>
+          <td class="td-note">Commercial license, 10 custom voices, API</td>
+          <td class="td-note">Casual</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Creator <span class="rec-badge">khuyên dùng</span></td>
+          <td class="td-price" style="color:var(--amber)">$22</td>
+          <td class="td-note">100,000 chars</td>
+          <td class="td-note">Voice cloning, Projects studio, 30 custom voices, 192kbps</td>
+          <td class="td-note">Creator</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Independent Publisher</td>
+          <td class="td-price" style="color:var(--amber)">$99</td>
+          <td class="td-note">500,000 chars</td>
+          <td class="td-note">Audiobook-grade, 160 custom voices, low-latency</td>
+          <td class="td-note">Agency</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Scale / Business</td>
+          <td class="td-price" style="color:var(--amber)">$330 / $1,320</td>
+          <td class="td-note">Hàng triệu</td>
+          <td class="td-note">Multi-seat, pro voice clones, SLA</td>
+          <td class="td-note">Enterprise</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="api-note">1 char = 1 credit (Multilingual v2) · Flash model: 0.5 credit/char · Annual: -17% · Rollover tối đa 2 tháng</div>
+  </div>
+
+  <!-- FPT.AI -->
+  <div class="pricing-tool">
+    <div class="pricing-tool-header" style="background:rgba(45,212,191,.06);border-bottom:1px solid rgba(45,212,191,.15)">
+      <div class="tool-icon" style="background:rgba(45,212,191,.12);color:var(--teal)">🇻🇳</div>
+      <div>
+        <h3>FPT.AI TTS — Giọng tiếng Việt chuẩn nhất</h3>
+        <p>fpt.ai · docs.fpt.ai · Giọng Bắc / Trung / Nam</p>
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Gói</th><th>Giá</th><th>Ký tự bao gồm</th><th>Ghi chú</th><th>Phù hợp</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-plan">Free Tier <span class="free-badge">free</span></td>
+          <td class="td-price" style="color:var(--green)">Miễn phí</td>
+          <td class="td-note">100,000 ký tự/tháng</td>
+          <td class="td-note">Giọng v5 mới, tốc độ thấp, giới hạn req/ngày</td>
+          <td class="td-note">Test</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Premium 500K <span class="rec-badge">khuyên dùng</span></td>
+          <td class="td-price" style="color:var(--teal)">500,000 VND (~$20)</td>
+          <td class="td-note">1,600,000 ký tự tổng</td>
+          <td class="td-note">Tốc độ cao, không giới hạn thời gian</td>
+          <td class="td-note">Video nhỏ</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Premium 1M</td>
+          <td class="td-price" style="color:var(--teal)">1,000,000 VND (~$40)</td>
+          <td class="td-note">4,100,000 ký tự tổng</td>
+          <td class="td-note">Tốc độ cao, không giới hạn</td>
+          <td class="td-note">Series video</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Premium 2M</td>
+          <td class="td-price" style="color:var(--teal)">2,000,000 VND (~$80)</td>
+          <td class="td-note">10,100,000 ký tự tổng</td>
+          <td class="td-note">Tốc độ cao, không giới hạn</td>
+          <td class="td-note">Agency</td>
+        </tr>
+        <tr>
+          <td class="td-plan">Business Premium</td>
+          <td class="td-price" style="color:var(--teal)">Liên hệ</td>
+          <td class="td-note">Tùy chỉnh</td>
+          <td class="td-note">Hỗ trợ kỹ thuật · Hotline: 1900 638 399</td>
+          <td class="td-note">Doanh nghiệp</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="api-note">SSML support · Hỗ trợ điều chỉnh pitch, speed, emphasis · Tích hợp REST API</div>
+  </div>
+
+  <!-- COST SUMMARY -->
+  <div class="section-label" style="margin-top:2.5rem">Tổng chi phí gợi ý theo quy mô</div>
+  <div class="cost-cards">
+    <div class="cost-card">
+      <div class="tier">Cá nhân · thử nghiệm</div>
+      <div class="amount" style="color:var(--green)">~$0</div>
+      <div class="desc">Tất cả gói Free<br>Kimi + Grok + Kling + FPT.AI Free</div>
+    </div>
+    <div class="cost-card">
+      <div class="tier">Creator nhỏ · 2–5 video/th</div>
+      <div class="amount" style="color:var(--teal)">~$62</div>
+      <div class="desc">SuperGrok $30<br>Kling Standard $10<br>ElevenLabs Creator $22</div>
+    </div>
+    <div class="cost-card">
+      <div class="tier">Agency · 10–30 video/th</div>
+      <div class="amount" style="color:var(--amber)">~$185</div>
+      <div class="desc">Kimi $19 + Grok $30<br>Kling Pro $37<br>ElevenLabs Publisher $99</div>
+    </div>
+    <div class="cost-card">
+      <div class="tier">Studio · 50+ video/th</div>
+      <div class="amount" style="color:var(--purple-light)">~$651+</div>
+      <div class="desc">Kimi $199 + Grok $30<br>Kling Premier $92<br>ElevenLabs Scale $330</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 3: TỰ BUILD API
+══════════════════════════════════════ -->
+<section id="build">
+  <div class="section-label">Đánh giá kỹ thuật</div>
+  <h2 class="section-title">Khả năng tự build hệ thống tích hợp API</h2>
+  <p class="section-sub">Xây dựng pipeline tự động hoá toàn bộ quy trình: từ brief → video thành phẩm</p>
+
+  <!-- Score header -->
+  <div class="feasibility-header">
+    <div class="feasibility-score"><span>7.2</span></div>
+    <div>
+      <h3>KHẢ THI — với điều kiện</h3>
+      <p>Pipeline tự động hoá hoàn toàn là có thể thực hiện được về mặt kỹ thuật. Tuy nhiên, <strong style="color:var(--amber)">Kling AI là điểm nghẽn lớn nhất</strong>: API chính thức yêu cầu cam kết $4,200 trả trước (3 tháng), không phù hợp cho dự án nhỏ và vừa. Giải pháp thực tế là dùng third-party như Fal.ai hoặc PiAPI cho Kling ở giai đoạn đầu. Tổng thời gian build MVP: <strong style="color:var(--teal)">4–8 tuần</strong> với team 1–2 developer.</p>
+    </div>
+  </div>
+
+  <!-- Pro / Con -->
+  <div class="eval-grid">
+    <div class="eval-card">
+      <h4 style="color:var(--green)">
+        <span style="background:rgba(52,211,153,.12);color:var(--green);width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">✓</span>
+        Thuận lợi
+      </h4>
+      <ul>
+        <li><span class="dot dot-green">✓</span><span><strong>Kimi API</strong> rất rẻ ($0.60/M tokens), OpenAI-compatible, dễ tích hợp vào bất kỳ stack nào. Auto context caching giảm cost 75%.</span></li>
+        <li><span class="dot dot-green">✓</span><span><strong>Grok Aurora</strong> có API qua third-party (PoYo): $0.03/ảnh, $0.15/video 6s — tốt cho prototype.</span></li>
+        <li><span class="dot dot-green">✓</span><span><strong>ElevenLabs API</strong> mature, tài liệu tốt, hỗ trợ SSML, dễ tích hợp, giọng tiếng Việt ngày càng tốt hơn.</span></li>
+        <li><span class="dot dot-green">✓</span><span><strong>FPT.AI</strong> có REST API đơn giản, giá rẻ nhất cho tiếng Việt, hỗ trợ local developer.</span></li>
+        <li><span class="dot dot-green">✓</span><span>Queue-based async workflow phù hợp vì video gen mất 30s–5 phút per clip — có thể xử lý nhiều job song song.</span></li>
+        <li><span class="dot dot-green">✓</span><span>Toàn bộ API đều REST/HTTP — không cần SDK đặc biệt, dùng được với Python, Node.js, Go...</span></li>
+      </ul>
+    </div>
+    <div class="eval-card">
+      <h4 style="color:var(--red)">
+        <span style="background:rgba(248,113,113,.12);color:var(--red);width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">✗</span>
+        Rào cản & Rủi ro
+      </h4>
+      <ul>
+        <li><span class="dot dot-red">✗</span><span><strong>Kling API chính thức</strong> yêu cầu $4,200 trả trước cho 3 tháng — không phù hợp cho giai đoạn thử nghiệm. Third-party không đảm bảo SLA.</span></li>
+        <li><span class="dot dot-red">✗</span><span><strong>Kling processing time</strong> có thể lên tới vài giờ trong giờ cao điểm — pipeline phải thiết kế async + retry logic.</span></li>
+        <li><span class="dot dot-red">✗</span><span><strong>Lip Sync API</strong> chưa có endpoint public của Kling. Hedra và HeyGen có API nhưng giá cao (~$0.5–1/phút video).</span></li>
+        <li><span class="dot dot-red">✗</span><span><strong>Consistency nhân vật</strong> qua nhiều cảnh khó duy trì tự động — cần human review loop, không hoàn toàn automated.</span></li>
+        <li><span class="dot dot-red">✗</span><span><strong>Quality control</strong>: fail rate khoảng 10–20% (prompt hiểu sai, chuyển động kỳ lạ) — cần retry + cost buffer.</span></li>
+        <li><span class="dot dot-red">✗</span><span><strong>Credit system không đồng nhất</strong>: mỗi provider dùng đơn vị khác nhau, khó budget dự đoán cho production scale.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Architecture -->
+  <div class="arch-block">
+    <h3>🏗 Kiến trúc pipeline đề xuất</h3>
+    <div class="arch-layers">
+      <div class="arch-layer" style="background:rgba(139,111,219,.08);border:1px solid rgba(139,111,219,.15)">
+        <div class="layer-label" style="color:var(--purple-light)">Layer 1</div>
+        <div class="layer-content"><strong>Orchestrator</strong> — nhận brief → gọi Kimi API → sinh prompt JSON chuẩn hoá</div>
+        <div class="layer-tech">Python · FastAPI · Kimi K2</div>
+      </div>
+      <div class="arch-layer" style="background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.12)">
+        <div class="layer-label" style="color:var(--blue)">Layer 2</div>
+        <div class="layer-content"><strong>Image Gen</strong> — gọi Grok Aurora API (qua PoYo) → lưu reference images + seed vào S3/R2</div>
+        <div class="layer-tech">Grok Aurora · Cloudflare R2</div>
+      </div>
+      <div class="arch-layer" style="background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.12)">
+        <div class="layer-label" style="color:var(--coral)">Layer 3</div>
+        <div class="layer-content"><strong>Video Gen Queue</strong> — gọi Kling (Fal.ai) → poll status async → download khi xong → lưu storage</div>
+        <div class="layer-tech">Kling / Fal.ai · Redis Queue · Celery</div>
+      </div>
+      <div class="arch-layer" style="background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.12)">
+        <div class="layer-label" style="color:var(--amber)">Layer 4</div>
+        <div class="layer-content"><strong>Voice Gen</strong> — gọi FPT.AI TTS (giọng Việt) hoặc ElevenLabs → xuất .mp3 → lưu song song với video</div>
+        <div class="layer-tech">FPT.AI · ElevenLabs · SSML</div>
+      </div>
+      <div class="arch-layer" style="background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.12)">
+        <div class="layer-label" style="color:var(--pink)">Layer 5</div>
+        <div class="layer-content"><strong>Lip Sync</strong> — upload video + audio lên Hedra API → poll → download synced video</div>
+        <div class="layer-tech">Hedra · HeyGen API</div>
+      </div>
+      <div class="arch-layer" style="background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.12)">
+        <div class="layer-label" style="color:var(--green)">Layer 6</div>
+        <div class="layer-content"><strong>Review + Deliver</strong> — human QC dashboard → approve/reject → auto-export đúng spec từng platform</div>
+        <div class="layer-tech">Next.js · ffmpeg · Webhook</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost comparison -->
+  <div class="eval-card" style="margin-bottom:1.5rem">
+    <h4 style="color:var(--amber)">
+      <span style="background:rgba(251,191,36,.1);color:var(--amber);width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">$</span>
+      Chi phí API ước tính per video (30 giây hoàn chỉnh)
+    </h4>
+    <ul style="margin-top:.5rem">
+      <li><span class="dot dot-amber">·</span><span>Kimi (script + prompt, ~2K tokens): <strong style="color:var(--text)">~$0.005</strong> — gần như miễn phí</span></li>
+      <li><span class="dot dot-amber">·</span><span>Grok Aurora (4–6 ảnh reference): <strong style="color:var(--text)">$0.12–$0.18</strong></span></li>
+      <li><span class="dot dot-amber">·</span><span>Kling Fal.ai (3×10s clips): <strong style="color:var(--text)">$2.70</strong></span></li>
+      <li><span class="dot dot-amber">·</span><span>FPT.AI TTS (~500 ký tự script): <strong style="color:var(--text)">~$0.005</strong> (gói Premium)</span></li>
+      <li><span class="dot dot-amber">·</span><span>Hedra Lip Sync (~30s): <strong style="color:var(--text)">~$0.25–$0.50</strong></span></li>
+      <li><span class="dot dot-amber">·</span><span><strong style="color:var(--teal)">Tổng per video: ~$3.10–$3.70 USD</strong> · So với thuê người quay: 500K–2M VND/video</span></li>
+    </ul>
+  </div>
+
+  <!-- Verdict / Roadmap -->
+  <div class="verdict-box">
+    <h3>⚡ Kết luận & Lộ trình triển khai</h3>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7">
+      Tự build là <strong style="color:var(--green)">khả thi và có ROI tốt</strong> nếu bạn sản xuất từ 20+ video/tháng. Điểm mấu chốt là không cố tự động hoá 100% ngay — thiết kế <strong style="color:var(--amber)">human-in-the-loop</strong> ở bước QC. Chi phí API rẻ hơn 5–10× so với thuê người, nhưng cần 1 developer dành 4–8 tuần để build và maintain pipeline.
+    </p>
+    <div class="verdict-phases">
+      <div class="phase-card">
+        <div class="phase-num" style="color:var(--teal)">Giai đoạn 1</div>
+        <h4>Proof of Concept</h4>
+        <p>Manual test từng API riêng lẻ. Xác nhận chất lượng nhân vật Việt Nam. Chọn stack công nghệ.</p>
+        <div class="duration">2–3 tuần · 1 dev</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num" style="color:var(--amber)">Giai đoạn 2</div>
+        <h4>MVP Pipeline</h4>
+        <p>Kết nối Kimi → Grok → Kling qua queue. Human review dashboard. Xuất video tự động theo spec.</p>
+        <div class="duration">3–4 tuần · 1–2 dev</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num" style="color:var(--purple-light)">Giai đoạn 3</div>
+        <h4>Production Scale</h4>
+        <p>Lip sync tích hợp, character consistency module, analytics, A/B test template, multi-brand support.</p>
+        <div class="duration">4–6 tuần · 2 dev</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Tổng hợp bởi Claude AI · Nguồn: klingai.com · moonshot.ai · x.ai · elevenlabs.io · docs.fpt.ai · Cập nhật tháng 4/2026
+</footer>
+
+</body>
+</html>
